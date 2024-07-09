@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+
+{% block content %}
+    <h1> Hi, {{user.username}}!</h1>
+    <form action="/playlists/new_plform">
+        <button>Create a New Playlist</button>
+    </form>
+    <form action="/playlists">
+        <button>My Playlists</button>
+    </form>
+    <form action="/songs">
+        <button>My Songs</button>
+    </form>
+{% endblock %}
+</body>
+</html>
